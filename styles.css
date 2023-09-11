@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;400;500;700;800;900&family=Zen+Kaku+Gothic+Antique:wght@300;400;500;700&display=swap');
+
+* {
+    /* font-family: 'Zen Kaku Gothic Antique', sans-serif; */
+    font-family: 'M PLUS 1p', sans-serif;
+}
+
+#title {
+    color: black;
+    background-color: pink;
+    text-align: center;
+    border-radius: 25px;
+}
+
+#credits {
+    font-style: italic;
+    font-size: 0.5rem;
+}
+
+button {
+    background-color: pink;
+    border-radius: 25px;
+
+}
+
+#displayList {
+    display: flex;
+    font-size: 4.5rem;
+}
