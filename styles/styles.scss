@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;400;500;700;800;900&family=Zen+Kaku+Gothic+Antique:wght@300;400;500;700&display=swap');
+
+/* font-family: 'Zen Kaku Gothic Antique', sans-serif; */
+$font-stack: 'M PLUS 1p', sans-serif;
+$primary-color: pink;
+$secondary-color: #89CFF0;
+$border-radius: 25px;
+
+@mixin flexRowSpaceBtwn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+* {
+    font-family: $font-stack;
+}
+
+#title {
+    color: black;
+    background-color: $primary-color;
+    text-align: center;
+    border-radius: $border-radius;
+}
+
+#credits {
+    font-style: italic;
+    font-size: 0.5rem;
+}
+
+button {
+    background-color: $primary-color;
+    border-radius: $border-radius;
+    cursor: pointer;
+    
+}
+
+.btn-active {
+    background-color: #77DD77;
+    pointer-events: none;
+    font-size: 110%;
+}
+
+#reset {
+    margin: 0 40px;
+    color: red;
+    cursor: pointer;
+    font-size: 90%;
+    display: none;
+
+    &:hover{
+        filter: brightness(90%)
+    }
+}
+
+
+#displayList {
+    @include flexRowSpaceBtwn;
+    font-size: 4.5rem;
+    margin: 30px 0;
+    min-height: 70vh;
+
+    .displayItems {
+        margin: 10px;
+        padding: 30px;
+        background-color: $secondary-color;
+        border-radius: $border-radius;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(120%);
+        }
+    }
+}
+
+#loadingAnimation {
+    width: 50px;
+    display: block;
+    margin: 20px;
+    display: none;
+}
+
+footer {
+    height: 20vh;
+    background-color: rgb(60, 60, 60);
+    text-align: center;
+    border-radius: $border-radius;
+    @include flexRowSpaceBtwn;
+    align-content: center;
+
+    p {
+        padding: 20px;
+        color: whitesmoke;
+    }
+}

@@ -1,0 +1,26 @@
+doctype html 
+
+html
+    head
+        title KANJI
+        link(rel="stylesheet", href=".././styles/styles.css")
+        script(src="https://code.jquery.com/jquery-3.7.1.min.js")
+        script(src=".././scripts/script.js")
+    body
+        h1#title KANJI 漢字
+
+        p#credits API provided by https://kanjiapi.dev/#!/documentation
+
+        - const items = ['Show Grade 1','Show Grade 2','Show Grade 3','Show Grade 4','Show Grade 5']
+        each item, index in items
+            button(id=`btn${index+1}`)= item
+        span#reset reset
+        
+        //- Credits to SamHerbert SVG
+        img#loadingAnimation(src=".././images/svg-loaders/three-dots.svg", alt="Loading Animation")
+
+        #displayList
+        
+        include footer
+
+//- Run with: pug -w ./ -o ./ -P
